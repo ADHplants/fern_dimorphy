@@ -3,9 +3,9 @@ library(tidyverse)
 library(ggpubr)
 library(lme4)
 
-CovSwc <- read_excel("C:/Users/harr3281/Documents/UNDERC/dimorphy and light/dimorphy and light.xlsx", 
-            sheet = "hab pref with water", col_types = c("text", "numeric", "numeric", 
-                  "numeric", "numeric","text"))
+CovSwc <- read_excel(here::here("dimorphy and light.xlsx"), 
+                     sheet = "hab pref with water", col_types = c("text", "numeric", "numeric", 
+                                                                  "numeric", "numeric","text"))
 CovSwc$Spp<-as.factor(CovSwc$Spp)
 CovSwc$invest<-CovSwc$fert/(CovSwc$fert+CovSwc$ster)#investment ratio
 CovSwc$inv2<-CovSwc$fert/CovSwc$ster
