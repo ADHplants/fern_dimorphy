@@ -5,7 +5,7 @@ library(ggpubr)
 ##### Reading in data and preparing variables #####
 
 #Water and light vs fertility data 
-CovSwc <- read_excel("C:/Users/harr3281/Documents/UNDERC/dimorphy and light/dimorphy and light.xlsx", 
+CovSwc <- read_excel(here::here("dimorphy and light.xlsx"), 
                      sheet = "hab pref with water", col_types = c("text", "numeric", "numeric", 
                                                                   "numeric", "numeric","text"))
 CovSwc$Spp<-as.factor(CovSwc$Spp)
